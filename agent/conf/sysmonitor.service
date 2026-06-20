@@ -1,0 +1,12 @@
+[Unit]
+Description=Sysmonitor Agent
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env python3 /opt/sysmonitor/monitor.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

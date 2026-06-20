@@ -1,0 +1,6 @@
+{
+  "server_url": "http://127.0.0.1:5000/api/metrics",
+  "api_token": "your_secure_pre_shared_key",
+  "collection_interval_seconds": 10,
+  "local_buffer_path": "/var/log/sysmonitor/buffer.jsonl"
+}

@@ -1,0 +1,25 @@
+services:
+  sysmonitor-receiver:
+    build: ./server
+    container_name: sysmonitor-receiver
+    ports:
+      - "5000:5000"
+    environment:
+      - AGENT_TOKEN=your_secure_pre_shared_key
+    restart: unless-stopped
+
+  sysmonitor-agent:
+    build: ./agent
+    container_name: sysmonitor-agent
+    network_mode: "host"       # Allows agent to see host network interfaces
+    pid: "host"                # Allows agent to see host CPU loads
+    volumes:
+      - /:/rootfs:ro           # Host filesystem
+      - /proc:/host/proc:ro    # Host process/memory info
+      - agent_data:/var/log/sysmonitor
+    restart: unless-stopped
+    depends_on:
+      - sysmonitor-receiver
+
+volumes:
+  agent_data:

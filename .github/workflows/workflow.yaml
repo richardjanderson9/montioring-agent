@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run quick sanity check
+      - name: "🔍 Run quick sanity check 🔍"
         run: |
           echo "Running CI test workflow"
           echo "Current directory: $(pwd)"
