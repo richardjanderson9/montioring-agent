@@ -1,0 +1,64 @@
+# ----------------------------------------------------
+# Core Secrets & Authentication (CRITICAL)
+# ----------------------------------------------------
+secrets.yaml
+.storage/
+.cloud/
+
+# Cloudflare & Azure Tokens/Configs
+.cloudflare/
+*cloudflare*.json
+*cloudflare*.token
+*cloudflare*.yml
+.azure/
+*azure*.json
+*azure*.token
+*azure_auth*
+*.pem
+*.key
+
+# ----------------------------------------------------
+# Databases
+# ----------------------------------------------------
+*.db
+*.db-shm
+*.db-wal
+
+# ----------------------------------------------------
+# Logs
+# ----------------------------------------------------
+*.log
+home-assistant.log*
+OZW_Log.txt
+
+# ----------------------------------------------------
+# System Cache & Backups
+# ----------------------------------------------------
+.HA_VERSION
+deps/
+tts/
+backups/
+*.tar
+__pycache__/
+*.py[cod]
+
+# ----------------------------------------------------
+# OS Generated Files
+# ----------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------------------------------
+# User-Specified Exclusions (Old & Testing)
+# ----------------------------------------------------
+# Blocks anything with "old" in the name
+*old*
+*Old*
+*OLD*
+
+# Blocks anything with "test", "testing", or "tester" in the name
+*test*
+*Test*
+*TEST*
+*testing*
+*tester*
